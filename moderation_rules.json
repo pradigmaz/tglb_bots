@@ -1,0 +1,47 @@
+{
+    "stop_words": {
+        "spam": {
+            "words": ["спам", "реклама", "продам", "куплю"],
+            "severity": "high",
+            "description": "Спам и реклама"
+        },
+        "abuse": {
+            "words": ["оскорбление", "мат"],
+            "severity": "high",
+            "description": "Оскорбления и нецензурная лексика"
+        },
+        "cheating": {
+            "words": ["готовое решение", "сделай за меня", "решить задачу", "решение задачи", "домашку", "домашнее задание"],
+            "severity": "medium",
+            "description": "Просьбы о готовых решениях"
+        }
+    },
+    "word_combinations": [
+        {
+            "words": ["готовое", "решение"],
+            "category": "cheating",
+            "severity": "medium"
+        },
+        {
+            "words": ["сделай", "за меня"],
+            "category": "cheating",
+            "severity": "medium"
+        },
+        {
+            "words": ["реши", "задачу"],
+            "category": "cheating",
+            "severity": "medium"
+        },
+        {
+            "words": ["напиши", "код"],
+            "category": "cheating",
+            "severity": "medium"
+        }
+    ],
+    "spam_patterns": [
+        {
+            "pattern": "http[s]?://(?:[a-zA-Z]|[0-9]|[$-_@.&+]|[!*\\(\\),]|(?:%[0-9a-fA-F][0-9a-fA-F]))+",
+            "description": "Ссылки на внешние ресурсы"
+        }
+    ]
+} 

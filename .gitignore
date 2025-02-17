@@ -1,0 +1,16 @@
+# Virtual Environment
+venv/
+
+*.txt
+*.exe
+
+*.md
+universal_rules.mdc
+
+logs/
+
+*.db
+md_файлы/
+.cursor/
+
+__pycache__/
